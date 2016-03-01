@@ -7,7 +7,7 @@ RUN apk add --update ca-certificates curl openssl unzip && \
   curl -L -o /tmp/terraform.zip \
     https://releases.hashicorp.com/terraform/0.6.12/terraform_0.6.12_linux_amd64.zip && \
   openssl dgst -sha256 /tmp/terraform.zip \
-    | grep '28c258e60157f78ce957c69f32eb78924d1aaf9f0c07cf53c90bf5c7ee4090e7' \
+    | grep '37513aba20f751705f8f98cd0518ebb6a4a9c2148453236b9a5c30074e2edd8d' \
     || (echo 'shasum mismatch' && false) && \
   unzip /tmp/terraform.zip -d /tmp/terraform && \
   mkdir -p /opt/terraform && \
