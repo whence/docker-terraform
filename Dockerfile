@@ -10,6 +10,6 @@ RUN apk add --update ca-certificates curl openssl unzip && \
     || (echo 'shasum mismatch' && false) && \
   unzip /opt/terraform/terraform.zip -d /opt/terraform/ && \
   ln -s /opt/terraform/terraform /usr/local/bin/terraform && \
-  rm -rf /var/cache/apk/*
+  rm -rf /opt/terraform/terraform.zip /var/cache/apk/*
 
 CMD ["terraform", "--help"]
